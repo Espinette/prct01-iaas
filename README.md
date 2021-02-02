@@ -10,5 +10,14 @@ esta breve [introducción a Markdown](https://guides.github.com/features/masteri
 este modo, podrán utilizar dicho lenguaje para escribir el informe en el repositorio de Github asociado a
 la asignación de Github Classroom que han aceptado.
 
+## Algunas tareas previas
+
+1. Cumplimente la [encuesta de elección de grupo de trabajo](https://campusingenieriaytecnologia.ull.es/mod/choicegroup/view.php?id=281122).
+2. Cumplimente la [encuesta sobre expectativas y conocimientos previos] (https://campusingenieriaytecnologia.ull.es/mod/feedback/view.php?id=281123).
+3. Dese de alta en el aula [Google Clasroom](https://campusingenieriaytecnologia.ull.es/mod/assign/view.php?id=281124) de la asignatura.
+
 ## Configuración de la máquina virtual en el IaaS
 
+## Instalación de software en la máquina virtual del IaaS
+
+## Instalación de Visual Studio Code
