@@ -18,6 +18,19 @@ la asignación de Github Classroom que han aceptado.
 
 ## Configuración de la máquina virtual en el IaaS
 
+Lo primero que debemos hacer es configurar el servicio VPN de la ULL en el caso de que estemos tratando de utilizar el servicio IaaS desde
+fuera de la red universitaria. Para ello, debemos acceder a la
+[documentación de configuración de la VPN de la ULL](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/)
+y descargar las instrucciones correspondientes a nuestro sistema operativo. Siga dichas instrucciones y trate de conectarse a la VPN de la ULL.
+
+Una vez conectado a la VPN, deberá acceder al [Servicio IaaS de la ULL](https://iaas.ull.es/) e introducir sus credenciales ULL. Una vez hecho
+lo anterior, se mostrará un panel de control con las diferentes máquinas virtuales que tiene asociadas a su cuenta. Si no lo ha hecho antes,
+deberá iniciar la máquina virtual que se llama *DSI*. Al arrancar dicha máquina, se le asignará una máquina virtual del pool de máquinas virtuales
+de la asignatura.
+
+
+
+
 ## Instalación de software en la máquina virtual del IaaS
 
 ## Instalación de Visual Studio Code
