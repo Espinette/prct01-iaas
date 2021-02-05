@@ -40,7 +40,7 @@ ssh usuario@10.6.XXX.XXX
 Introduzca *yes* y pulse intro ante la pregunta:
 
 ```bash
-The authenticity of host '10.6.XXX.XXX (10.6.XXX.XXX)' can't be established.
+The authenticity of host \'10.6.XXX.XXX (10.6.XXX.XXX)\' can\'t be established.
 ECDSA key fingerprint is SHA256:1Xm4M66FeBUSiykP7SqJgObwjmVs2gEouBhy1PTWDV4.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
