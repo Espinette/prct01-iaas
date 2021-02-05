@@ -11,7 +11,7 @@ los diferentes problemas a los que se han enfrentado con sus respectivas solucio
 
 1. Cumplimente la [encuesta de elección de grupo de trabajo](https://campusingenieriaytecnologia.ull.es/mod/choicegroup/view.php?id=281122).
 2. Cumplimente la [encuesta sobre expectativas y conocimientos previos](https://campusingenieriaytecnologia.ull.es/mod/feedback/view.php?id=281123).
-3. Dese de alta en el aula [Google Classroom](https://campusingenieriaytecnologia.ull.es/mod/assign/view.php?id=281124) de la asignatura.
+3. Dese de alta en el aula [Google Classroom](https://classroom.google.com/c/MjMxMDkxNzcyMTY5?hl=es&cjc=pyq2dp7) de la asignatura.
 4. Si no lo ha hecho antes, dese de alta en [Github Classroom](https://classroom.github.com/) haciendo uso de su cuenta de Github (preferiblemente, aquella asociada a su correo institucional aluXXXXXXXXXXXXX@ull.edu.es).
 5. Acepte la [asignación de Github Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
 6. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para
@@ -38,7 +38,7 @@ máquina virtual, abra una terminal y teclee lo siguiente:
 ssh usuario@10.6.XXX.XXX
 ```
 
-Introduzca *yes* y pulse intro ante la pregunta:
+Introduzca *yes* y pulse intro ante la siguiente pregunta:
 
 ```bash
 The authenticity of host '10.6.XXX.XXX (10.6.XXX.XXX)' can't be established.
@@ -172,6 +172,24 @@ Tal y como puede observarse, hemos sido capaces de acceder a la máquina virtual
 contraseña. Además de lo anterior, en el prompt de la máquina virtual, debería aparecer el nuevo nombre de host de
 nuestra máquina virtual.
 
+Si tampoco quisiera utilizar su nombre de usuario de la máquina virtual a la hora de conectar vía SSH, puede configurar
+el siguiente fichero:
+
+```bash
+edusegre@lluvia:~$ touch .ssh/config 
+edusegre@lluvia:~$ vi .ssh/config 
+edusegre@lluvia:~$ cat .ssh/config 
+Host iaas-dsi2
+  HostName iaas-dsi2
+  User usuario
+```
+
+Ahora podrá iniciar una conexión SSH ejecutando el siguiente comando:
+
+```bash
+edusegre@lluvia:~$ ssh iaas-dsi2
+```
+
 Genere las claves pública-privada en su máquina virtual también, siguiendo los pasos que siguió anteriormente en su
 máquina local:
 
@@ -202,5 +220,3 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfCKDPGn7qLhwmjKCYaCBeOZVObmdHQ/GFOYALTU1L
 ```
 
 ## Instalación de software en la máquina virtual del IaaS
-
-## Instalación de Visual Studio Code
