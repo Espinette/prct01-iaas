@@ -4,18 +4,19 @@ En esta práctica llevaremos a cabo la configuración de la máquina virtual que
 del servicio IaaS de la ULL, además de la instalación y configuración de todas las herramientas necesarias
 para comenzar a trabajar en la asignatura.
 
-Dado que tendrán que llevar a cabo un informe acerca de todos los pasos que han seguido, además de enumerar
-los diferentes problemas a los que se han enfrentado con sus respectivas soluciones, les aconsejo que lean
-esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). De este modo,
-podrán utilizar dicho lenguaje para escribir el informe en el repositorio de Github asociado a la asignación
-de Github Classroom que tendrán que aceptar.
+Tendrán que llevar a cabo un informe acerca de todos los pasos que han seguido, además de enumerar
+los diferentes problemas a los que se han enfrentado con sus respectivas soluciones.
 
 ## Algunas tareas previas
 
 1. Cumplimente la [encuesta de elección de grupo de trabajo](https://campusingenieriaytecnologia.ull.es/mod/choicegroup/view.php?id=281122).
 2. Cumplimente la [encuesta sobre expectativas y conocimientos previos](https://campusingenieriaytecnologia.ull.es/mod/feedback/view.php?id=281123).
 3. Dese de alta en el aula [Google Classroom](https://campusingenieriaytecnologia.ull.es/mod/assign/view.php?id=281124) de la asignatura.
-4. Acepte la [asignación de Github Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
+4. Si no lo ha hecho antes, dese de alta en [Github Classroom](https://classroom.github.com/) haciendo uso de su cuenta de Github (preferiblemente, aquella asociada a su correo institucional aluXXXXXXXXXXXXX@ull.edu.es).
+5. Acepte la [asignación de Github Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
+6. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para
+escribir sus informes de prácticas. Lea el siguiente recurso sobre [Github Pages](https://pages.github.com/). Habilite Github Pages en el
+repositorio asociado a esta práctica y desarrolle el informe de la misma como una Github Page haciendo uso de Markdown.
 
 ## Configuración de la máquina virtual en el IaaS
 
@@ -78,8 +79,17 @@ usuario@ubuntu:~$ cat /etc/hosts
 ...
 ```
 
-Tal y como puede observarse, he cambiado el antiguo nombre de host *ubuntu*, por el nombre de host *iaas-dsi2*. Para que todos
-los cambios anteriores tengan efecto, deberá reiniciar la máquina virtual:
+En este caso, he cambiado el antiguo nombre de host *ubuntu*, por el nombre de host *iaas-dsi2*. Antes de proceder a reiniciar la máquina
+virtual para que todos los cambios tengan efecto, actualice el software de la misma:
+
+```bash
+usuario@ubuntu:~$ sudo apt update
+...
+usuario@ubuntu:~$ sudo apt upgrade
+...
+```
+
+Reinicie la máquina virtual:
 
 ```bash
 usuario@ubuntu:~$ sudo reboot
