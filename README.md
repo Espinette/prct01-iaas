@@ -169,11 +169,11 @@ usuario@iaas-dsi2:~$
 ```
 
 Tal y como puede observarse, hemos sido capaces de acceder a la máquina virtual sin necesidad de introducir ninguna
-contraseña. Además de lo anterior, en el prompt de la máquina virtual, debería aparecer el nuevo nombre de host de
-nuestra máquina virtual.
+contraseña. Además de lo anterior, en el prompt de la máquina virtual, debería aparecer el nuevo nombre de host
+configurado previamente.
 
-Si tampoco quisiera utilizar su nombre de usuario de la máquina virtual a la hora de conectar vía SSH, puede configurar
-el siguiente fichero:
+Si tampoco quisiera utilizar el nombre de usuario (*usuario*) de la máquina virtual a la hora de conectarse vía
+SSH, puede configurar el siguiente fichero en su máquina local:
 
 ```bash
 edusegre@lluvia:~$ touch .ssh/config 
@@ -184,7 +184,7 @@ Host iaas-dsi2
   User usuario
 ```
 
-Ahora podrá iniciar una conexión SSH ejecutando el siguiente comando:
+Ahora podrá iniciar una conexión SSH simplemente indicando el nombre de la máquina virtual:
 
 ```bash
 edusegre@lluvia:~$ ssh iaas-dsi2
@@ -202,19 +202,8 @@ Enter same passphrase again:
 Your identification has been saved in /home/usuario/.ssh/id_rsa.
 Your public key has been saved in /home/usuario/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:n0HSfZjtrDsXcG5I+9flkOmjYGGHRnjFE69W9eCf624 usuario@iaas-dsi2
-The key's randomart image is:
-+---[RSA 2048]----+
-|           .o.. .|
-|         o oo* o.|
-|        o = +.* .|
-|         = .o*...|
-|        S *.+*o+.|
-|         + *o.B o|
-|          = .+ =o|
-|         . ...*E+|
-|            o+o= |
-+----[SHA256]-----+
+...
+
 usuario@iaas-dsi2:~$ cat .ssh/id_rsa.pub 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfCKDPGn7qLhwmjKCYaCBeOZVObmdHQ/GFOYALTU1Lmnjb108HGSr7aDaFZunI1TtwAKh1qGdo6LYCPECY+y90LA+vtRTdQnoPqGzsTctillZkRJoMv7beLhpHVKFadXNc/DKlwCU83uHwTRGmqb3OY5246rSIA+/blFpDEBpK088oXvTailphaCeZRHV+Qg12LJu5Q2uKBTjckU0yebz4Xx2wXjZQkpohX8PSOJpKy6QlNmG8j3DDY+qrRmy+LScRGyWHlqQIVR2YrejuHqs2mG1b8FSGNwUUCp20rc0TWV22ggjQxEmjCRAHIofRsZ7zN752aChLqWGXcDJLTI8d usuario@iaas-dsi2
 ```
