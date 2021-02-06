@@ -40,7 +40,7 @@ máquina virtual, abra una terminal y teclee lo siguiente:
 ssh usuario@10.6.XXX.XXX
 ```
 
-Introduzca *yes* y pulse intro ante la siguiente pregunta:
+Introduzca `yes` y pulse intro ante la siguiente pregunta:
 
 ```bash
 The authenticity of host '10.6.XXX.XXX (10.6.XXX.XXX)' can't be established.
@@ -48,9 +48,9 @@ ECDSA key fingerprint is SHA256:1Xm4M66FeBUSiykP7SqJgObwjmVs2gEouBhy1PTWDV4.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-La contraseña que debe introducir ahora es *usuario* (las credenciales por defecto son *usuario*, *usuario* para el nombre de usuario y
+La contraseña que debe introducir ahora es `usuario` (las credenciales por defecto son `usuario`, `usuario` para el nombre de usuario y
 contraseña, respectivamente). Una vez introducida dicha contraseña, el propio sistema le indicará que la modifique. Para ello, deberá
-introducir su contraseña actual (*usuario*) y, luego, su nueva contraseña por duplicado. Trate de recordar su nueva contraseña
+introducir su contraseña actual (`usuario`) y, luego, su nueva contraseña por duplicado. Trate de recordar su nueva contraseña
 o apúntela en un lugar seguro. Una vez hecho lo anterior, tendrá que volver a iniciar una conexión SSH con su máquina, pero esta vez
 deberá usar su nueva contraseña para acceder.
 
@@ -64,7 +64,7 @@ usuario@ubuntu:~$ cat /etc/hostname
 iaas-dsi2
 ```
 
-Tal y como puede observar, he llamado a la máquina virtual *iaas-dsi2*. También debemos modificar ciertos parámetros en
+Tal y como puede observar, he llamado a la máquina virtual `iaas-dsi2`. También debemos modificar ciertos parámetros en
 el siguiente fichero:
 
 ```bash
@@ -81,7 +81,7 @@ usuario@ubuntu:~$ cat /etc/hosts
 ...
 ```
 
-En este caso, he cambiado el antiguo nombre de host *ubuntu*, por el nombre de host *iaas-dsi2*. Antes de proceder a reiniciar la máquina
+En este caso, he cambiado el antiguo nombre de host `ubuntu`, por el nombre de host `iaas-dsi2`. Antes de proceder a reiniciar la máquina
 virtual para que todos los cambios tengan efecto, actualice el software de la misma:
 
 ```bash
@@ -174,7 +174,7 @@ Tal y como puede observarse, hemos sido capaces de acceder a la máquina virtual
 contraseña. Además de lo anterior, en el prompt de la máquina virtual, debería aparecer el nuevo nombre de host
 configurado previamente.
 
-Si tampoco quisiera utilizar el nombre de usuario (*usuario*) de la máquina virtual a la hora de conectarse vía
+Si tampoco quisiera utilizar el nombre de usuario (`usuario`) de la máquina virtual a la hora de conectarse vía
 SSH, puede configurar el siguiente fichero en su máquina local:
 
 ```bash
@@ -236,3 +236,57 @@ user.name=Eduardo Segredo
 user.email=esegredo@ull.edu.es
 ```
 
+Ahora, configuremos el prompt de la terminal para que aparezca la rama actual en la que nos encontramos cuando
+accedemos a algún directorio que resulta estar asociado a un repositorio git. Para ello, descargue el script
+[git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) y eche un vistazo a su contenido
+para aprender a configurarlo en su máquina virtual. Los pasos que doy a continuación serían para una `bash`:
+
+```bash
+usuario@iaas-dsi2:~$ mv git-prompt.sh .git-prompt.sh
+usuario@iaas-dsi2:~$ vi .bashrc
+usuario@iaas-dsi2:~$ tail .bashrc
+...
+source ~/.git-prompt.sh
+PS1='\[\033]0;\u@\h:\w\007\]\[\033[0;34m\][\[\033[0;31m\]\w\[\033[0;32m\]($(git branch 2>/dev/null | sed -n "s/\* \(.*\)/\1/p"))\[\033[0;34m\]]$'
+
+usuario@iaas-dsi2:~$ exec bash -l
+[~()]$
+```
+
+Tal y como puede observarse, los pasos básicos a seguir son, por un lado, la descarga del script y, por el otro, modificar el fichero
+`~/.bashrc`, incluyendo al final del mismo las dos líneas que aparecen en el código anterior. En caso de utilizar otro tipo de terminal,
+lea la documentación incluida en el propio script `git-prompt.sh`. El último comando permite reiniciar la terminal. Podremos observar que
+el formato del prompt ha cambiado.
+
+No obstante, para comprobar si realmente el prompt muestra lo que deseamos, que no es otra cosa que la rama actual de trabajo cuando
+accedemos a un directorio asociado a un repositorio, tendremos que añadir la clave pública de la máquina virtual en la configuración
+de las claves de nuestra cuenta de Github, de modo que nos sea mucho más fácil trabajar con repositorios remotos, y así poder también
+clonar alguno de los repositorios para hacer la prueba. En primer lugar, copie la clave pública de su máquina virtual:
+
+```bash
+[~()]$cat ~/.ssh/id_rsa.pub
+```
+
+Una vez copiada, acceda a la configuración de su cuenta de Github (*account settings*), y en la sección *SSH and GPG keys*, pulse sobre
+el botón *New SSH key*. En el formulario añada un título para la clave (yo tengo *usuario@iaas-dsi2*) y pegue la clave pública de su
+máquina virtual en el campo de texto *key*. Por último, pulse sobre el botón *Add SSH key*. Si todo ha ido bien, ahora podría ejecutar
+el siguiente comando desde la máquina virtual para clonar un repositorio:
+
+```bash
+[~()]$git clone git@github.com:ULL-ESIT-INF-DSI-2021/prct01-iaas-vscode.git
+Clonando en 'prct01-iaas-vscode'...
+remote: Enumerating objects: 100, done.
+remote: Counting objects: 100% (100/100), done.
+remote: Compressing objects: 100% (79/79), done.
+remote: Total 100 (delta 32), reused 50 (delta 16), pack-reused 0
+Recibiendo objetos: 100% (100/100), 341.75 KiB | 1.63 MiB/s, listo.
+Resolviendo deltas: 100% (32/32), listo.
+[~()]$ls
+prct01-iaas-vscode
+[~()]$cd prct01-iaas-vscode/
+[~/prct01-iaas-vscode(main)]$
+```
+
+Observe como se ha clonado el repositorio almacenado en Github de manera satisfactoria sin necesidad de introducir ningún tipo de credencial.
+Además, al acceder al directorio asociado al repositorio git, observe como el prompt del sistema indica, entre paréntesis, la rama actual de
+trabajo (`main`). Puede llevar a cabo la anterior comprobación con cualquiera de sus repositorios remotos.
