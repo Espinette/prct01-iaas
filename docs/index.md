@@ -373,3 +373,7 @@ v15.8.0
 [~()]$npm --version
 7.5.1
 ```
+
+Recuerde que debe cumplimentar un informe, a modo de Github Page, con todos los pasos que ha llevado a cabo para el desarrollo de esta práctica.
+El repositorio debe ser el que se haya creado automáticamente tras haber aceptado la asignación de Github Classroom.
+En el aula virtual de la asignatura, deberá entregar el enlace a dicho repositorio en la tarea correspondiente.
