@@ -209,3 +209,28 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfCKDPGn7qLhwmjKCYaCBeOZVObmdHQ/GFOYALTU1L
 ```
 
 ## Instalación de software en la máquina virtual del IaaS
+
+Instale git en la máquina virtual, aunque suele venir preinstalado con el sistema operativo:
+
+```bash
+usuario@iaas-dsi2:~$ sudo apt install git
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+git ya está en su versión más reciente (1:2.25.1-1ubuntu3).
+0 actualizados, 0 nuevos se instalarán, 0 para eliminar y 0 no actualizados.
+```
+
+Si necesita refrescar sus conocimientos sobre git, por favor, acceda al libro
+["Pro Git" de Scott Chacon y Ben Straub](https://git-scm.com/book/es/v2). Lo que si es importante hacer es seguir las instrucciones
+disponibles en dicho libro para [configurar git por primera vez](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez) en la máquina virtual. Básicamente, la configuración
+se reduce a ejecutar los siguientes comandos:
+
+```bash
+usuario@iaas-dsi2:~$ git config --global user.name "Eduardo Segredo"
+usuario@iaas-dsi2:~$ git config --global user.email esegredo@ull.edu.es
+usuario@iaas-dsi2:~$ git config --list
+user.name=Eduardo Segredo
+user.email=esegredo@ull.edu.es
+```
+
