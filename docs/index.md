@@ -1,4 +1,6 @@
-# Práctica 1 - Configuración del entorno de trabajo y herramientas
+# Desarrollo de Sistemas Informáticos - Grado en Ingeniería Informática - ULL
+
+## Práctica 1 - Configuración del entorno de trabajo y herramientas
 
 En esta práctica llevaremos a cabo la configuración de la máquina virtual que tienen disponible a través
 del servicio IaaS de la ULL, además de la instalación y configuración de todas las herramientas necesarias
@@ -7,7 +9,7 @@ para comenzar a trabajar en la asignatura.
 Tendrán que llevar a cabo un informe acerca de todos los pasos que han seguido, además de enumerar
 los diferentes problemas a los que se han enfrentado con sus respectivas soluciones.
 
-## Algunas tareas previas
+### Algunas tareas previas
 
 1. Cumplimente la [encuesta de elección de grupo de trabajo](https://campusingenieriaytecnologia.ull.es/mod/choicegroup/view.php?id=281122).
 2. Cumplimente la [encuesta sobre expectativas y conocimientos previos](https://campusingenieriaytecnologia.ull.es/mod/feedback/view.php?id=281123).
@@ -18,7 +20,7 @@ los diferentes problemas a los que se han enfrentado con sus respectivas solucio
 escribir sus informes de prácticas. Lea el siguiente recurso sobre [Github Pages](https://docs.github.com/en/github/working-with-github-pages).
 Habilite Github Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una Github Page haciendo uso de Markdown.
 
-## Configuración de la máquina virtual en el IaaS
+### Configuración de la máquina virtual en el IaaS
 
 Lo primero que debemos hacer es configurar el servicio VPN de la ULL en el caso de que estemos tratando de utilizar el servicio IaaS desde
 fuera de la red universitaria. Para ello, debemos acceder a la
@@ -208,7 +210,7 @@ usuario@iaas-dsi2:~$ cat .ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfCKDPGn7qLhwmjKCYaCBeOZVObmdHQ/GFOYALTU1Lmnjb108HGSr7aDaFZunI1TtwAKh1qGdo6LYCPECY+y90LA+vtRTdQnoPqGzsTctillZkRJoMv7beLhpHVKFadXNc/DKlwCU83uHwTRGmqb3OY5246rSIA+/blFpDEBpK088oXvTailphaCeZRHV+Qg12LJu5Q2uKBTjckU0yebz4Xx2wXjZQkpohX8PSOJpKy6QlNmG8j3DDY+qrRmy+LScRGyWHlqQIVR2YrejuHqs2mG1b8FSGNwUUCp20rc0TWV22ggjQxEmjCRAHIofRsZ7zN752aChLqWGXcDJLTI8d usuario@iaas-dsi2
 ```
 
-## Instalación de software en la máquina virtual del IaaS
+### Instalación de software en la máquina virtual del IaaS
 
 Instale git en la máquina virtual, aunque suele venir preinstalado con el sistema operativo:
 
