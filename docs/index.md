@@ -14,9 +14,12 @@ los diferentes problemas a los que se han enfrentado con sus respectivas solucio
 1. Cumplimente la [encuesta de elección de grupo de trabajo](https://campusingenieriaytecnologia.ull.es/mod/choicegroup/view.php?id=281122).
 2. Cumplimente la [encuesta sobre expectativas y conocimientos previos](https://campusingenieriaytecnologia.ull.es/mod/feedback/view.php?id=281123).
 3. Dese de alta en el aula [Google Classroom](https://classroom.google.com/c/MjMxMDkxNzcyMTY5?hl=es&cjc=pyq2dp7) de la asignatura.
-4. Si no lo ha hecho antes, dese de alta en [Github Classroom](https://classroom.github.com/) haciendo uso de su cuenta de Github (preferiblemente, aquella asociada a su correo institucional aluXXXXXXXXXXXXX@ull.edu.es).
-5. Acepte la [asignación de Github Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
-6. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para
+4. Partiremos de la idea de que ya posee una cuenta [Github](https://github.com/) asociada a su correo institucional
+(aluXXXXXXXXXX@ull.edu.es). En caso contrario, créela.
+5. Solicite los [beneficios de estudiantes de Github Education](https://education.github.com/discount_requests/student_application).
+6. Si no lo ha hecho antes, dese de alta en [Github Classroom](https://classroom.github.com/) haciendo uso de su cuenta de Github, preferiblemente, aquella asociada a su correo institucional.
+7. Acepte la [asignación de Github Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
+8. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para
 escribir sus informes de prácticas. Lea el siguiente recurso sobre [Github Pages](https://docs.github.com/en/github/working-with-github-pages).
 Habilite Github Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una Github Page haciendo uso de Markdown.
 
@@ -210,7 +213,7 @@ usuario@iaas-dsi2:~$ cat .ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfCKDPGn7qLhwmjKCYaCBeOZVObmdHQ/GFOYALTU1Lmnjb108HGSr7aDaFZunI1TtwAKh1qGdo6LYCPECY+y90LA+vtRTdQnoPqGzsTctillZkRJoMv7beLhpHVKFadXNc/DKlwCU83uHwTRGmqb3OY5246rSIA+/blFpDEBpK088oXvTailphaCeZRHV+Qg12LJu5Q2uKBTjckU0yebz4Xx2wXjZQkpohX8PSOJpKy6QlNmG8j3DDY+qrRmy+LScRGyWHlqQIVR2YrejuHqs2mG1b8FSGNwUUCp20rc0TWV22ggjQxEmjCRAHIofRsZ7zN752aChLqWGXcDJLTI8d usuario@iaas-dsi2
 ```
 
-### Instalación de software en la máquina virtual del IaaS
+### Instalación de git y Node.js en la máquina virtual del IaaS
 
 Instale git en la máquina virtual, aunque suele venir preinstalado con el sistema operativo:
 
@@ -290,3 +293,83 @@ prct01-iaas-vscode
 Observe como se ha clonado el repositorio almacenado en Github de manera satisfactoria sin necesidad de introducir ningún tipo de credencial.
 Además, al acceder al directorio asociado al repositorio git, observe como el prompt del sistema indica, entre paréntesis, la rama actual de
 trabajo (`main`). Puede llevar a cabo la anterior comprobación con cualquiera de sus repositorios remotos.
+
+Si desea refrescar un poco sus conocimientos sobre Github, le recomiendo este
+[curso de introducción](https://lab.github.com/githubtraining/introduction-to-github). En general, en el
+[Learning Lab](https://lab.github.com/) podrá encontrar multitud de cursos con los que aprender diferentes
+aspectos del ecosistema Github. Un curso muy recomendable es
+[*First Week on GitHub*](https://lab.github.com/githubtraining/first-week-on-github).
+
+Ahora vamos a proceder a instalar [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm), el gestor de versiones de Node.js.
+[Node.js](https://nodejs.org/en/) es un entorno que permite la ejecución de código desarrollado en JavaScript y variantes, como
+por ejemplo, TypeScript.
+
+```bash
+[~()]$wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+[~()]$exec bash -l
+[~()]$nvm --version
+0.37.2
+```
+Puede observar como hemos instalado nvm satisfactoriamente. Una vez hecho lo anterior, vamos a proceder a instalar la versión más
+reciente de Node.js:
+
+```bash
+[~()]$nvm install node
+Downloading and installing node v15.8.0...
+Downloading https://nodejs.org/dist/v15.8.0/node-v15.8.0-linux-x64.tar.xz...
+####################################################################################################################################################################################### 100,0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v15.8.0 (npm v7.5.1)
+Creating default alias: default -> node (-> v15.8.0)
+[~()]$node --version
+v15.8.0
+[~()]$npm --version
+7.5.1
+```
+
+Al instalar Node.js, se puede observar como se ha instalado la última versión (15.8.0), además de la última versión de
+[Node Package Manager (npm)](https://www.npmjs.com/), el gestor de paquetes de Node.js. Más adelante, aprenderemos más
+acerca de estas herramientas.
+
+Para instalar una versión concreta de Node.js, podemos hacer lo siguiente:
+
+```bash
+[~()]$nvm install 12.0.0
+Downloading and installing node v12.0.0...
+Downloading https://nodejs.org/dist/v12.0.0/node-v12.0.0-linux-x64.tar.xz...
+####################################################################################################################################################################################### 100,0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v12.0.0 (npm v6.9.0)
+[~()]$node --version
+v12.0.0
+[~()]$npm --version
+6.9.0
+```
+
+Por último, para cambiar entre versiones, podemos ejecutar los siguientes comandos:
+
+```bash
+[~()]$nvm list
+->      v12.0.0
+        v15.8.0
+default -> node (-> v15.8.0)
+iojs -> N/A (default)
+unstable -> N/A (default)
+node -> stable (-> v15.8.0) (default)
+stable -> 15.8 (-> v15.8.0) (default)
+lts/* -> lts/fermium (-> N/A)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.23.2 (-> N/A)
+lts/erbium -> v12.20.1 (-> N/A)
+lts/fermium -> v14.15.4 (-> N/A)
+[~()]$nvm use v15.8.0 
+Now using node v15.8.0 (npm v7.5.1)
+[~()]$node --version
+v15.8.0
+[~()]$npm --version
+7.5.1
+```
