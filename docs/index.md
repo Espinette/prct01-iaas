@@ -22,6 +22,9 @@ los diferentes problemas a los que se han enfrentado con sus respectivas solucio
 8. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para
 escribir sus informes de prácticas. Lea el siguiente recurso sobre [Github Pages](https://docs.github.com/en/github/working-with-github-pages).
 Habilite Github Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una Github Page haciendo uso de Markdown.
+Los siguientes cursos de [Github Learning Lab](https://lab.github.com/) también le podrían ser de ayuda para acometer esta tarea:
+  * [Github Pages](https://lab.github.com/githubtraining/github-pages)
+  * [Communicating using Markdown](https://lab.github.com/githubtraining/communicating-using-markdown)
 
 ### Configuración de la máquina virtual en el IaaS
 
@@ -296,7 +299,7 @@ trabajo (`main`). Puede llevar a cabo la anterior comprobación con cualquiera d
 
 Si desea refrescar un poco sus conocimientos sobre Github, le recomiendo este
 [curso de introducción](https://lab.github.com/githubtraining/introduction-to-github). En general, en el
-[Learning Lab](https://lab.github.com/) podrá encontrar multitud de cursos con los que aprender diferentes
+[Github Learning Lab](https://lab.github.com/) podrá encontrar multitud de cursos con los que aprender diferentes
 aspectos del ecosistema Github. Un curso muy recomendable es
 [*First Week on GitHub*](https://lab.github.com/githubtraining/first-week-on-github).
 
