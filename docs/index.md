@@ -179,9 +179,9 @@ Si tampoco quisiera utilizar el nombre de usuario (`usuario`) de la máquina vir
 SSH, puede configurar el siguiente fichero en su máquina local:
 
 ```bash
-edusegre@lluvia:~$ touch .ssh/config 
-edusegre@lluvia:~$ vi .ssh/config 
-edusegre@lluvia:~$ cat .ssh/config 
+edusegre@lluvia:~$ touch ~/.ssh/config 
+edusegre@lluvia:~$ vi ~/.ssh/config 
+edusegre@lluvia:~$ cat ~/.ssh/config 
 Host iaas-dsi2
   HostName iaas-dsi2
   User usuario
