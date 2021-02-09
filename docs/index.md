@@ -17,14 +17,10 @@ los diferentes problemas a los que se han enfrentado con sus respectivas solucio
 5. Solicite los [beneficios de estudiantes de Github Education](https://education.github.com/discount_requests/student_application).
 6. Si no lo ha hecho antes, dese de alta en [Github Classroom](https://classroom.github.com/) haciendo uso de su cuenta de Github, preferiblemente, aquella asociada a su correo institucional.
 7. Acepte la [asignación de Github Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
-8. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para
-escribir sus informes de prácticas. Lea el siguiente recurso sobre [Github Pages](https://docs.github.com/en/github/working-with-github-pages).
-Habilite Github Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una Github Page haciendo uso de Markdown.
-Github Pages utiliza Jekyll, una herramienta que transforma ficheros de texto en sitios Web. Para más información, visite el sitio Web de
-[Jekyll](https://jekyllrb.com/).
-Los siguientes cursos de [Github Learning Lab](https://lab.github.com/) también le podrían ser de ayuda para acometer esta tarea:
-  * [Github Pages](https://lab.github.com/githubtraining/github-pages)
-  * [Communicating using Markdown](https://lab.github.com/githubtraining/communicating-using-markdown)
+8. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para escribir sus informes de prácticas. Lea el siguiente recurso sobre [Github Pages](https://docs.github.com/en/github/working-with-github-pages). Habilite Github Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una Github Page haciendo uso de Markdown. Github Pages utiliza Jekyll, una herramienta que transforma ficheros de texto en sitios Web. Para más información, visite el sitio Web de [Jekyll](https://jekyllrb.com/). Los siguientes cursos de [Github Learning Lab](https://lab.github.com/) también le podrían ser de ayuda para acometer esta tarea:
+
+* [Github Pages](https://lab.github.com/githubtraining/github-pages)
+* [Communicating using Markdown](https://lab.github.com/githubtraining/communicating-using-markdown)
 
 ## Configuración de la máquina virtual en el IaaS
 
@@ -313,6 +309,7 @@ por ejemplo, TypeScript.
 [~()]$nvm --version
 0.37.2
 ```
+
 Puede observar como hemos instalado nvm satisfactoriamente. Una vez hecho lo anterior, vamos a proceder a instalar la versión más
 reciente de Node.js:
 
