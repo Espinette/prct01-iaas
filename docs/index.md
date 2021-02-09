@@ -12,13 +12,13 @@ los diferentes problemas a los que se han enfrentado con sus respectivas solucio
 1. Cumplimente la [encuesta de elección de grupo de trabajo](https://campusingenieriaytecnologia.ull.es/mod/choicegroup/view.php?id=281122).
 2. Cumplimente la [encuesta sobre expectativas y conocimientos previos](https://campusingenieriaytecnologia.ull.es/mod/feedback/view.php?id=281123).
 3. Dese de alta en el aula [Google Classroom](https://classroom.google.com/c/MjMxMDkxNzcyMTY5?hl=es&cjc=pyq2dp7) de la asignatura.
-4. Partiremos de la idea de que ya posee una cuenta [Github](https://github.com/) asociada a su correo institucional
+4. Partiremos de la idea de que ya posee una cuenta [GitHub](https://github.com/) asociada a su correo institucional
 (aluXXXXXXXXXX@ull.edu.es). En caso contrario, créela.
-5. Solicite los [beneficios de estudiantes de Github Education](https://education.github.com/discount_requests/student_application).
-6. Si no lo ha hecho antes, dese de alta en [Github Classroom](https://classroom.github.com/) haciendo uso de su cuenta de Github, preferiblemente, aquella asociada a su correo institucional.
-7. Acepte la [asignación de Github Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
-8. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para escribir sus informes de prácticas. Lea el siguiente recurso sobre [Github Pages](https://docs.github.com/en/github/working-with-github-pages). Habilite Github Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una Github Page haciendo uso de Markdown. Github Pages utiliza Jekyll, una herramienta que transforma ficheros de texto en sitios Web. Para más información, visite el sitio Web de [Jekyll](https://jekyllrb.com/). Los siguientes cursos de [Github Learning Lab](https://lab.github.com/) también le podrían ser de ayuda para acometer esta tarea:
-  * [Github Pages](https://lab.github.com/githubtraining/github-pages)
+5. Solicite los [beneficios de estudiantes de GitHub Education](https://education.github.com/discount_requests/student_application).
+6. Si no lo ha hecho antes, dese de alta en [GitHub Classroom](https://classroom.github.com/) haciendo uso de su cuenta de GitHub, preferiblemente, aquella asociada a su correo institucional.
+7. Acepte la [asignación de GitHub Classroom](https://classroom.github.com/a/ckIr4G7P) asociada a esta práctica.
+8. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para escribir sus informes de prácticas. Lea el siguiente recurso sobre [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages). Habilite GitHub Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una GitHub Page haciendo uso de Markdown. GitHub Pages utiliza Jekyll, una herramienta que transforma ficheros de texto en sitios Web. Para más información, visite el sitio Web de [Jekyll](https://jekyllrb.com/). Los siguientes cursos de [GitHub Learning Lab](https://lab.github.com/) también le podrían ser de ayuda para acometer esta tarea:
+  * [GitHub Pages](https://lab.github.com/githubtraining/github-pages)
   * [Communicating using Markdown](https://lab.github.com/githubtraining/communicating-using-markdown)
 
 ## Configuración de la máquina virtual en el IaaS
@@ -261,14 +261,14 @@ el formato del prompt ha cambiado.
 
 No obstante, para comprobar si realmente el prompt muestra lo que deseamos, que no es otra cosa que la rama actual de trabajo cuando
 accedemos a un directorio asociado a un repositorio, tendremos que añadir la clave pública de la máquina virtual en la configuración
-de las claves de nuestra cuenta de Github, de modo que nos sea mucho más fácil trabajar con repositorios remotos, y así poder también
+de las claves de nuestra cuenta de GitHub, de modo que nos sea mucho más fácil trabajar con repositorios remotos, y así poder también
 clonar alguno de los repositorios para hacer la prueba. En primer lugar, copie la clave pública de su máquina virtual:
 
 ```bash
 [~()]$cat ~/.ssh/id_rsa.pub
 ```
 
-Una vez copiada, acceda a la configuración de su cuenta de Github (*account settings*), y en la sección *SSH and GPG keys*, pulse sobre
+Una vez copiada, acceda a la configuración de su cuenta de GitHub (*account settings*), y en la sección *SSH and GPG keys*, pulse sobre
 el botón *New SSH key*. En el formulario añada un título para la clave (yo tengo *usuario@iaas-dsi2*) y pegue la clave pública de su
 máquina virtual en el campo de texto *key*. Por último, pulse sobre el botón *Add SSH key*. Si todo ha ido bien, ahora podría ejecutar
 el siguiente comando desde la máquina virtual para clonar un repositorio:
@@ -288,14 +288,14 @@ prct01-iaas-vscode
 [~/prct01-iaas-vscode(main)]$
 ```
 
-Observe como se ha clonado el repositorio almacenado en Github de manera satisfactoria sin necesidad de introducir ningún tipo de credencial.
+Observe como se ha clonado el repositorio almacenado en GitHub de manera satisfactoria sin necesidad de introducir ningún tipo de credencial.
 Además, al acceder al directorio asociado al repositorio git, observe como el prompt del sistema indica, entre paréntesis, la rama actual de
 trabajo (`main`). Puede llevar a cabo la anterior comprobación con cualquiera de sus repositorios remotos.
 
-Si desea refrescar un poco sus conocimientos sobre Github, le recomiendo este
+Si desea refrescar un poco sus conocimientos sobre GitHub, le recomiendo este
 [curso de introducción](https://lab.github.com/githubtraining/introduction-to-github). En general, en el
-[Github Learning Lab](https://lab.github.com/) podrá encontrar multitud de cursos con los que aprender diferentes
-aspectos del ecosistema Github. Un curso muy recomendable es
+[GitHub Learning Lab](https://lab.github.com/) podrá encontrar multitud de cursos con los que aprender diferentes
+aspectos del ecosistema GitHub. Un curso muy recomendable es
 [*First Week on GitHub*](https://lab.github.com/githubtraining/first-week-on-github).
 
 Ahora vamos a proceder a instalar [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm), el gestor de versiones de Node.js.
@@ -373,6 +373,6 @@ v15.8.0
 7.5.1
 ```
 
-Recuerde que debe cumplimentar un informe, a modo de Github Page, con todos los pasos que ha llevado a cabo para el desarrollo de esta práctica.
-El repositorio debe ser el que se haya creado automáticamente tras haber aceptado la asignación de Github Classroom.
+Recuerde que debe cumplimentar un informe, a modo de GitHub Page, con todos los pasos que ha llevado a cabo para el desarrollo de esta práctica.
+El repositorio debe ser el que se haya creado automáticamente tras haber aceptado la asignación de GitHub Classroom.
 En el aula virtual de la asignatura, deberá entregar el enlace a dicho repositorio en la tarea correspondiente.
